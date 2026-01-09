@@ -1,16 +1,25 @@
-## Hi there 👋
+# Arnaldo Sepulveda
 
-<!--
-**arnaldosepulveda/arnaldosepulveda** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Building on-premise AI knowledge infrastructure at **Keystone AI**.
 
-Here are some ideas to get you started:
+## What I'm working on
+* Multi-source RAG pipelines (SharePoint, file shares, databases)
+* Query-time permission enforcement for enterprise deployments
+* Audit-ready systems for regulated industries
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tech Stack
+* **Inference:** Ollama (local LLM deployment)
+* **Vector DB:** Qdrant
+* **API:** FastAPI
+* **Auth/Audit:** PostgreSQL
+* **Integrations:** Microsoft Graph API, Docker, Tailscale
+
+## Background
+* 12 years at Genesys (enterprise contact center platforms)
+* Deployed systems for defense contractors, federal agencies, Fortune 500
+* MScE Electrical Engineering (AI/ML focus)
+
+## Contact
+* 🌐 [getkeystone.ai](https://getkeystone.ai)
+* 📧 arnaldo@getkeystone.ai
+* 💼 [LinkedIn](https://www.linkedin.com/in/arnaldosepulveda)
