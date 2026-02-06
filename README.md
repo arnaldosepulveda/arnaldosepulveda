@@ -1,77 +1,51 @@
 # Arnaldo Sepulveda
 
-Building on-premise AI knowledge infrastructure for organizations that can't use cloud AI.
+I build **on-prem AI knowledge infrastructure** for organizations that cannot use cloud AI.
 
-## Current Focus
+My focus is **governed retrieval**: permission-aware answers with citations, fail-closed behavior when evidence is insufficient, and audit records that stand up in compliance-constrained environments.
 
-**Keystone AI** — Enterprise RAG platform with query-time authorization and multi-source ingestion.
+Runs fully on customer infrastructure. No external API calls. Air-gap compatible.
 
-Core problems I'm solving:
-- Permission-aware vector retrieval (users only see content they're authorized to access)
-- Multi-source knowledge ingestion with access control inheritance
-- Audit logging for compliance frameworks (NIST 800-171, CMMC, HIPAA)
-- On-premise deployment patterns for air-gapped and regulated environments
+## Current Focus: single-machine air-gapped proof (KDAT-001A)
 
-## Technical Stack
+I’m shipping a single-machine demo that runs fully offline and proves:
 
-**Inference & Embeddings**
-- Ollama for local LLM deployment (Qwen2.5, Llama 3)
-- BGE-large-en-v1.5 for embeddings
-- Multi-GPU inference environments (RTX 3090/3080 class hardware)
+- Evidence-backed answers with citations
+- Fail-closed behavior when evidence is insufficient
+- Query-time authorization (users only retrieve what they’re allowed to see)
+- Tamper-evident audit records for every query (verifiable chain)
+- Reproducible run: same results twice while air-gapped
 
-**Vector Storage & Retrieval**
-- Qdrant for metadata-filtered vector search
-- PostgreSQL for permissions, sync state, audit trails
-- Query-time authorization with role-based filtering
+## Keystone AI
 
-**API & Integration**
-- FastAPI with async processing
-- Microsoft Graph API for SharePoint integration (OAuth On-Behalf-Of flow)
-- File share monitoring with metadata extraction
-- PDF/OCR processing pipelines
+**Keystone AI** is an on-prem knowledge system designed for regulated enterprises:
 
-**Deployment & Security**
-- Docker Compose for service orchestration
-- Network segmentation with VLAN isolation
-- Encryption at rest, comprehensive audit logging
-- Backup/restore runbooks with timed recovery drills
-
-## Background
-
-**12 years at Genesys** deploying enterprise contact center platforms for:
-- Defense contractors
-- Federal agencies
-- Fortune 500 companies
-
-Built production systems handling millions of interactions with strict uptime, security, and audit requirements.
-
-**MScE Electrical Engineering** — AI/ML specialization
-
-## What I'm Building
-
-Enterprise knowledge infrastructure that runs entirely on customer hardware:
 - No external API calls
 - No data exfiltration
-- Complete audit trails
-- Role-based content access
-- Citation-backed answers
+- Audit-first by default
+- Deployable in air-gapped environments
 
-Target deployments: Organizations operating under NIST 800-171, CMMC readiness frameworks, FedRAMP-aligned patterns, HIPAA, SOX.
+Target: regulated and compliance-constrained environments where access control and auditability are mandatory.
 
-## Architecture Principles
+## What I’m Building
 
-1. **Query-time authorization** — permission checks at retrieval, not ingestion
-2. **Multi-source ingestion** — unified interface across SharePoint, file shares, databases, email
-3. **Audit-first design** — every query logged with user, sources, timestamps
-4. **Zero external dependencies** — deployable in air-gapped environments
-5. **Production-grade operations** — monitoring, alerting, backup/restore
+- **Permission-aware retrieval**: enforce access control at retrieval time
+- **Multi-source ingestion**: SharePoint, file shares, databases (with ACL fidelity)
+- **Audit-grade logging**: query, retrieval, response, and verification artifacts
+- **Operational discipline**: runbooks, backup/restore, measurable verification
 
-## Contact
+## Stack (today)
 
-🌐 [getkeystone.ai](https://getkeystone.ai)  
-📧 arnaldo@getkeystone.ai  
-💼 [LinkedIn](https://linkedin.com/in/arnaldo-sepulveda)
+- Python, FastAPI
+- PostgreSQL (permissions, sync state, audit log)
+- Vector search backend (evolving)
+- Ollama (local inference)
+- Docker Compose (demo packaging)
+- Microsoft Graph API (SharePoint ingestion, OAuth delegation)
 
----
+## Links
 
-*Building infrastructure that enables regulated industries to deploy AI without losing data control.*
+- Keystone AI: https://getkeystone.ai
+- GitHub org: https://github.com/getkeystone
+- LinkedIn: https://linkedin.com/in/arnaldo-sepulveda
+- Contact: arnaldo@getkeystone.ai
