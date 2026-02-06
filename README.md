@@ -6,7 +6,7 @@ My focus is **governed retrieval**: permission-aware answers with citations, fai
 
 Runs fully on customer infrastructure. No external API calls. Air-gap compatible.
 
-## Current Focus: single-machine air-gapped proof (KDAT-001A)
+## Current Focus: single-machine governed proof (KDAT-001A)
 
 I’m shipping a single-machine demo that runs fully offline and proves:
 
@@ -18,20 +18,12 @@ I’m shipping a single-machine demo that runs fully offline and proves:
 
 ## Keystone AI
 
-**Keystone AI** is an on-prem knowledge system designed for regulated enterprises:
+**Keystone AI** is an on-prem knowledge system for regulated and compliance-constrained environments where access control and auditability are mandatory.
 
-- No external API calls
-- No data exfiltration
-- Audit-first by default
-- Deployable in air-gapped environments
-
-Target: regulated and compliance-constrained environments where access control and auditability are mandatory.
-
-## What I’m Building
-
-- **Permission-aware retrieval**: enforce access control at retrieval time
+Core capabilities:
+- **Permission-aware retrieval**: authorization enforced at retrieval, not by trusting the model
 - **Multi-source ingestion**: SharePoint, file shares, databases (with ACL fidelity)
-- **Audit-grade logging**: query, retrieval, response, and verification artifacts
+- **Audit verification artifacts**: query, retrieval, response, and chain verification output
 - **Operational discipline**: runbooks, backup/restore, measurable verification
 
 ## Stack (today)
