@@ -1,27 +1,24 @@
 ## Arnaldo Sepulveda
 
-Building Keystone AI -- controlled procedure retrieval for
-industrial safety and regulated operations.
+Building Keystone AI -- governed closed-loop operational knowledge
+for industrial safety and regulated operations.
 
 On-prem. Access-controlled. Evidence-backed. Auditable.
-Fails closed when evidence is insufficient.
+Fails closed when evidence is insufficient. Scores every answer
+for factual consistency.
 
 **Live demo:** [demo.getkeystone.ai](https://demo.getkeystone.ai)
--- 57 Alberta OHS documents, hybrid retrieval, AI-synthesized
+-- 56 Alberta OHS documents, hybrid retrieval, AI-synthesized
 answers with source citations.
 
-Current capabilities demonstrated with evidence artifacts:
+**Background:** 12 years enterprise architecture at Genesys --
+regulated verticals, public sector, Fortune 500. MScE Electrical
+Engineering (AI/ML). Firefighter I/II.
 
-- Hybrid retrieval (keyword + semantic) with adaptive weighting
-- AI-synthesized answers citing source document, page, passage
-- Query-time access control (four-role model)
-- Fail-closed behavior when evidence is insufficient
-- Tamper-evident audit trail (HMAC hash chain)
-- Prompt injection mitigation (10/10 adversarial tests blocked)
-- Retrieval quality: 95% on 20-query eval suite
-- Config-driven deployment architecture
-- Security hardened API
-- Professional operator-facing console
+**What I publish:** Evidence artifacts, not marketing copy.
+Claims without receipts are not claims.
+
+---
 
 | | |
 |---|---|
