@@ -1,30 +1,15 @@
 ## Arnaldo Sepulveda
 
-Building Keystone AI -- governed closed-loop operational knowledge
-for industrial safety and regulated operations.
+Enterprise AI engineer with 12+ years of infrastructure and platform experience at Genesys, supporting regulated and public sector customers. MScE in Electrical Engineering (AI/ML focus).
 
-On-prem. Access-controlled. Evidence-backed. Auditable.
-Fails closed when evidence is insufficient. Scores every answer
-for factual consistency.
+Most recently built a governed RAG platform that runs entirely on-premises, enforces role-based access control at query time, refuses to answer when evidence is insufficient, and produces hash-chained audit trails. Two live deployments serving real users.
 
-**Live demo:** [demo.getkeystone.ai](https://demo.getkeystone.ai)
--- 56 Alberta OHS documents, hybrid retrieval, AI-synthesized
-answers with source citations.
+Quantitative evaluation results: zero access control leaks across adversarial testing, retrieval P@1 of 0.75, MRR of 0.79, 83% fail-closed accuracy on out-of-scope queries.
 
-**Background:** 12 years enterprise architecture at Genesys --
-regulated verticals, public sector, Fortune 500. MScE Electrical
-Engineering (AI/ML). Firefighter I/II.
-
-**What I publish:** Evidence artifacts, not marketing copy.
-Claims without receipts are not claims.
-
----
+Stack: Python, FastAPI, PostgreSQL + pgvector, Ollama, React/TypeScript, Docker Compose, Caddy, Cloudflare Tunnels.
 
 | | |
 |---|---|
-| Live Demo | [demo.getkeystone.ai](https://demo.getkeystone.ai) |
-| Keystone AI | [getkeystone.ai](https://getkeystone.ai) |
-| Proof ledger | [github.com/getkeystone/keystone-kdat](https://github.com/getkeystone/keystone-kdat) |
-| Keystone org | [github.com/getkeystone](https://github.com/getkeystone) |
+| Project | [getkeystone.ai](https://getkeystone.ai) |
 | LinkedIn | [linkedin.com/in/arnaldosepulveda](https://linkedin.com/in/arnaldosepulveda) |
 | Contact | arnaldo@getkeystone.ai |
