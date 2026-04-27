@@ -2,7 +2,7 @@
 
 Enterprise AI engineer with 12+ years of infrastructure and platform experience at Genesys, supporting regulated and public sector customers. MScE in Electrical Engineering (AI/ML focus).
 
-Most recently built a governed RAG platform that runs entirely on-premises, enforces role-based access control at query time, refuses to answer when evidence is insufficient, and produces hash-chained audit trails. Two live deployments serving real users.
+Most recently built a governed RAG platform that runs entirely on-premises, enforces role-based access control at query time, refuses to answer when evidence is insufficient, and produces hash-chained audit trails. Deployed for a municipal fire department with operational users. Public demo at demo.getkeystone.ai (53 Alberta OHS documents).
 
 Quantitative evaluation results: zero access control leaks across adversarial testing, retrieval P@1 of 0.75, MRR of 0.79, 83% fail-closed accuracy on out-of-scope queries.
 
