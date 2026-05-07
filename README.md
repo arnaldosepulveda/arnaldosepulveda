@@ -40,6 +40,12 @@ Extending Keystone to governed agentic actions: tool authorization by role,
 action audit trails, HITL approval gates, multi-step reasoning with
 per-step evidence. Eval target: KDAT-002.
 
+**Governed Incident Response** — an agentic interface where every tool call
+is authorized by the user's role and logged to a tamper-evident audit trail.
+The agent generates different UI depending on what the user is allowed to do.
+Built with CopilotKit + Next.js for the AI Tinkerers Generative UI Hackathon.
+Repo: [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent)
+
 ### Links
 
 | | |
