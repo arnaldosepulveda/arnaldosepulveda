@@ -48,10 +48,11 @@ Repo: [governed-incident-agent](https://github.com/arnaldosepulveda/governed-inc
 
 ### Links
 
-| | |
+| Property | URL |
 |---|---|
-| Project | [getkeystone.ai](https://getkeystone.ai) |
-| Demo | [demo.getkeystone.ai](https://demo.getkeystone.ai) — log in as `operator1` / `demo123` |
-| Eval ledger | [getkeystone/keystone-kdat](https://github.com/getkeystone/keystone-kdat) |
-| LinkedIn | [linkedin.com/in/arnaldosepulveda](https://linkedin.com/in/arnaldosepulveda) |
+| Personal site | https://arnaldosepulveda.com |
+| Project | https://getkeystone.ai |
+| Demo | https://demo.getkeystone.ai (operator1 / demo123) |
+| Eval ledger | https://github.com/getkeystone/keystone-kdat |
+| LinkedIn | https://linkedin.com/in/arnaldosepulveda |
 | Contact | arnaldo@getkeystone.ai |
