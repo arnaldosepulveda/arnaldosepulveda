@@ -6,7 +6,7 @@ MScE in Electrical Engineering (AI/ML focus), UNB.
 
 ### What I'm building
 
-**Keystone AI** — a governed RAG system designed for regulated industries.
+**Keystone Applied Intelligence** — a governed RAG system designed for regulated industries.
 Runs entirely on-premises. No external API dependencies for inference
 or embedding.
 
