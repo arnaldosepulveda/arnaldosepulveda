@@ -18,18 +18,14 @@ Core constraints the system enforces:
 - Factual consistency scoring on every response
 - Hash-chained, tamper-evident audit trail (INSERT-only database role)
 
-### Evaluation baseline (KDAT-001B, 2026-04-11)
+### Evaluation baselines
 
-| Metric | Result |
-|---|---|
-| Corpus | 53 Alberta OHS safety documents, 2,674 chunks |
-| Retrieval P@1 | 0.75 |
-| MRR | 0.79 |
-| Adversarial ACL | 8/8 blocked, 0 leaks |
-| Fail-closed | 5/6 (83%) — FC-005 remediated 2026-05-17 |
-| Audit chain | Intact, immutable |
+| Baseline | Description | Cases | Date |
+|---|---|---|---|
+| KDAT-002D | Governed agent extension | 186 cases, 12 categories, 0 fail | 2026-05-20 |
+| KDAT-001B | Governed retrieval | P@1 0.75, MRR 0.79, 8/8 ACL blocked | 2026-04-11 |
 
-FC-005 (domain scope failure on TIER greenhouse gas query) remediated 2026-05-17 with a pre-retrieval domain scope guard (v0.5.2-fc005). Validated manually against the KDAT-001B probe set. Sealed re-eval pending KDAT-002.
+FC-005 (domain scope failure on TIER greenhouse gas query) remediated 2026-05-17 with a pre-retrieval domain scope guard (v0.5.2-fc005).
 
 Eval methodology and ledger: [keystone-kdat](https://github.com/getkeystone/keystone-kdat)
 
@@ -43,11 +39,9 @@ Python · FastAPI · PostgreSQL + pgvector · Ollama · React/TypeScript · Dock
 
 **[Provana AcuteCare](https://getkeystone.ai/blog/provana-acutecare/)** — Team build at the same hackathon, applying the governed-incident-agent scaffold to acute care medicine. Three protocols (sepsis, stroke, pediatric fever). I contributed the governance layer; teammate built the dynamic clinical UI. The governance architecture moved from workplace safety to medicine with zero structural changes.
 
-### Currently working on
+### Governed agent extension
 
-Extending Keystone to governed agentic actions: tool authorization by role,
-action audit trails, HITL approval gates, multi-step reasoning with
-per-step evidence. Eval target: KDAT-002.
+Governed agent extension with severity-tier HITL routing, per-step evidence gating, and HMAC action audit chain. Evaluated: 186 cases across 12 categories, 0 failures. Eval process identified 4 system bugs; all fixed and re-verified. Failing run published.
 
 ### Links
 
