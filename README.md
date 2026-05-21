@@ -1,14 +1,12 @@
 ## Arnaldo Sepulveda
 
-Enterprise AI engineer. 12+ years at Genesys building infrastructure
-and platform systems for regulated and public sector customers.
+Enterprise AI engineer. 12+ years at Genesys building and supporting enterprise contact center systems for regulated and public sector customers.
 MScE in Electrical Engineering (AI/ML focus), UNB.
 
 ### What I'm building
 
-**Keystone Applied Intelligence** — a governed RAG system designed for regulated industries.
-Runs entirely on-premises. No external API dependencies for inference
-or embedding.
+**Keystone Applied Intelligence** — a governed retrieval and agent system for regulated industries.
+Runs entirely on-premises. No external API dependencies for inference or embedding.
 
 Core constraints the system enforces:
 - Evidence-backed answers tied to specific source documents and sections
@@ -41,7 +39,7 @@ Python · FastAPI · PostgreSQL + pgvector · Ollama · React/TypeScript · Dock
 
 ### Governed agent extension
 
-Governed agent extension with severity-tier HITL routing, per-step evidence gating, and HMAC action audit chain. Evaluated: 186 cases across 12 categories, 0 failures. Eval process identified 4 system bugs; all fixed and re-verified. Failing run published.
+Governed agent extension with severity-tier HITL routing, per-step evidence gating, and HMAC action audit chain. Evaluated: 186 cases across 12 categories, 0 failures. Eval process identified 4 system bugs; all fixed and re-verified. Failing run (KDAT-002C) published.
 
 ### Links
 
