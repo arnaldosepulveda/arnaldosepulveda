@@ -45,7 +45,6 @@ Governed agent extension with severity-tier HITL routing, per-step evidence gati
 
 | Property | URL |
 |---|---|
-| Personal site | https://arnaldosepulveda.com |
 | Project | https://getkeystone.ai |
 | Demo | https://demo.getkeystone.ai (operator1 / demo123) |
 | Blog | https://getkeystone.ai/blog/ |
