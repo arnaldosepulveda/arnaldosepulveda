@@ -1,12 +1,10 @@
-## Arnaldo Sepulveda
+# Arnaldo Sepulveda
 
-Enterprise AI engineer. 12+ years at Genesys building and supporting enterprise contact center systems for regulated and public sector customers.
-MScE in Electrical Engineering (AI/ML focus), UNB.
+Senior AI engineer specializing in conversational and retrieval AI under audit pressure. Thirteen years at Genesys building the AI intelligence layer of enterprise contact centers (Knowledge Center retrieval, chat suite, e-services, contact intelligence: the pre-LLM era of conversational AI). MScE in Electrical Engineering with thesis on multi-agent coordination, UNB.
 
-### What I'm building
+## What I'm building
 
-**Keystone Applied Intelligence** — a governed retrieval and agent system for regulated industries.
-Runs entirely on-premises. No external API dependencies for inference or embedding.
+Keystone Applied Intelligence — a governed retrieval and agent system for regulated industries. Runs entirely on-premises. No external API dependencies for inference or embedding.
 
 Core constraints the system enforces:
 - Evidence-backed answers tied to specific source documents and sections
@@ -16,7 +14,9 @@ Core constraints the system enforces:
 - Factual consistency scoring on every response
 - Hash-chained, tamper-evident audit trail (INSERT-only database role)
 
-### Evaluation baselines
+Every architectural decision traces to a documented contact center AI pattern (severity-tier escalation, per-step validation, compliance logging, confidence-threshold refusal) rebuilt for the LLM substrate.
+
+## Evaluation baselines
 
 | Baseline | Description | Cases | Date |
 |---|---|---|---|
@@ -25,23 +25,25 @@ Core constraints the system enforces:
 
 FC-005 (domain scope failure on TIER greenhouse gas query) remediated 2026-05-17 with a pre-retrieval domain scope guard (v0.5.2-fc005).
 
-Eval methodology and ledger: [keystone-kdat](https://github.com/getkeystone/keystone-kdat)
+Forward eval lineage uses `keystone-{component}/{type}-v{n}` versioning. Existing KDAT-001B and KDAT-002D remain published as the canonical historical baselines; the migration cross-reference lives in keystone-kdat.
 
-### Stack
+Eval methodology and ledger: keystone-kdat
+
+## Stack
 
 Python · FastAPI · PostgreSQL + pgvector · Ollama · React/TypeScript · Docker Compose · Caddy
 
-### Recent (May 2026)
+## Recent (May 2026)
 
-**[governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent)** — Solo build for the AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026. An agentic interface where every tool call is authorized by the user's role and logged to a tamper-evident audit trail. The agent generates different UI depending on what the user is allowed to do. CopilotKit + Next.js.
+**governed-incident-agent** — Solo build for the AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026. An agentic interface where every tool call is authorized by the user's role and logged to a tamper-evident audit trail. The agent generates different UI depending on what the user is allowed to do. CopilotKit + Next.js.
 
-**[Provana AcuteCare](https://getkeystone.ai/blog/provana-acutecare/)** — Team build at the same hackathon, applying the governed-incident-agent scaffold to acute care medicine. Three protocols (sepsis, stroke, pediatric fever). I contributed the governance layer; teammate built the dynamic clinical UI. The governance architecture moved from workplace safety to medicine with zero structural changes.
+**Provana AcuteCare** — Team build at the same hackathon, applying the governed-incident-agent scaffold to acute care medicine. Three protocols (sepsis, stroke, pediatric fever). I contributed the governance layer; teammate built the dynamic clinical UI. The governance architecture moved from workplace safety to medicine with zero structural changes.
 
-### Governed agent extension
+## Next
 
-Governed agent extension with severity-tier HITL routing, per-step evidence gating, and HMAC action audit chain. Evaluated: 186 cases across 12 categories, 0 failures. Eval process identified 4 system bugs; all fixed and re-verified. Failing run (KDAT-002C) published.
+Keystone platform extending into three regulated verticals: governed conversational agents (keystone-engage), regulated content retrieval (keystone-counsel), and standalone evaluation framework (keystone-verify).
 
-### Links
+## Links
 
 | Property | URL |
 |---|---|
