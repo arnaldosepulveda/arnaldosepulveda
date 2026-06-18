@@ -20,12 +20,12 @@ Every architectural decision traces to a documented contact center AI pattern (s
 
 | Baseline | Description | Cases | Date |
 |---|---|---|---|
-| KDAT-002D | Governed agent extension | 186 cases, 12 categories, 0 fail | 2026-05-20 |
-| KDAT-001B | Governed retrieval | P@1 0.75, MRR 0.79, 8/8 ACL blocked | 2026-04-11 |
+| keystone-core/agent-v1 (formerly KDAT-002D) | Governed agent extension | 186 cases, 12 categories, 0 fail | 2026-05-20 |
+| keystone-core/retrieval-v1 (formerly KDAT-001B) | Governed retrieval | P@1 0.75, MRR 0.79, 8/8 ACL blocked | 2026-04-11 |
 
 FC-005 (domain scope failure on TIER greenhouse gas query) remediated 2026-05-17 with a pre-retrieval domain scope guard (v0.5.2-fc005).
 
-Forward eval lineage uses `keystone-{component}/{type}-v{n}` versioning. Existing KDAT-001B and KDAT-002D remain published as the canonical historical baselines; the migration cross-reference lives in keystone-kdat.
+Forward eval lineage uses `keystone-{component}/{type}-v{n}` versioning. Existing keystone-core/retrieval-v1 and keystone-core/agent-v1 remain published as the canonical historical baselines; the migration cross-reference lives in keystone-kdat.
 
 Eval methodology and ledger: keystone-kdat
 
