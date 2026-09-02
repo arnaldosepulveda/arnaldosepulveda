@@ -1,112 +1,170 @@
 # Arnaldo Sepulveda
 
-**AI Systems Engineer with 14+ years in enterprise technology, including more than 12 years at Genesys, now building and evaluating modern retrieval and agent systems.**
+**AI Engineer & Builder working across production AI, conversational AI, RAG, evaluation, and enterprise contact-center systems.**
 
-My background connects enterprise contact-center engineering with hands-on AI development in Python, FastAPI, structured APIs, RAG, hybrid retrieval, agent workflows, evaluation, and observability.
+I spent more than 12 years at Genesys working on enterprise contact-center systems. Since late 2024, I have applied that operational foundation to hands-on AI engineering through Keystone Applied Intelligence.
 
-## Engineering background
+## What I build
 
-At **Genesys**, I worked within the Business Applications team across customer implementations, product-fitness investigations, migrations, go-lives, and production incidents.
+I build production-oriented AI systems and engineering instruments, including:
 
-I specialized in:
+* Python, FastAPI, Pydantic, and REST services
+* PostgreSQL and pgvector
+* PostgreSQL full-text search and hybrid retrieval
+* deterministic procedural reranking
+* RAG with citations and evidence thresholds
+* conversational workflows
+* authorization-aware retrieval
+* endpoint-agnostic evaluation harnesses and regression tests
+* OpenTelemetry GenAI and HTTP tracing
+* local model execution
 
-* Knowledge
-* AI and classification
-* Digital Services and eServices
-* Agent Workspace
+The emphasis is practical: understand the operational problem, build something useful, evaluate it, find its failure modes, and improve it using evidence and real use.
 
-My product SME experience included:
+## Why this work
+
+In enterprise support, I repeatedly saw organizations reconstruct answers they already possessed. The knowledge was fragmented across tickets, documentation, internal discussions, and individual experts, making the right answer difficult to retrieve in the right context.
+
+The organization already possessed the knowledge, but had not operationalized it so the right person could reliably get the right answer in the right context.
+
+Applied AI can reduce that repeated reconstruction. The goal is not to replace experienced support engineers, but to make existing organizational knowledge more usable so they can focus on novel, ambiguous, and higher-value problems.
+
+**[The knowledge was already there. The system to use it was not.](https://arnaldosepulveda.com/writing/the-knowledge-was-already-there/)**
+
+## Current work: Keystone Applied Intelligence
+
+[Keystone Applied Intelligence](https://getkeystone.ai/) is my independent AI engineering and R&D practice. I use it to build and evaluate retrieval systems, conversational workflows, APIs, observability, and bounded runtime controls.
+
+Current implementation work includes:
+
+* Python, FastAPI, Pydantic, and REST APIs
+* PostgreSQL FTS + pgvector hybrid retrieval
+* deterministic reranking
+* citations and evidence thresholds
+* authorization-first retrieval
+* conversational AI workflows
+* evaluation and regression infrastructure
+* OpenTelemetry tracing with GenAI model, token, latency, and HTTP spans delivered to Grafana Tempo
+* local inference through Ollama
+
+The public projects are separately composed engineering instruments. They are not evidence of one complete demonstrated production runtime.
+
+In [Keystone Engage](https://github.com/getkeystone/keystone-engage), the default served application uses one orchestrator. A separate experimental path implements five specialist agent identities across four coordination phases. NATS JetStream integration is optional and experimental, not evidence of distributed production deployment. The repositories do not establish production high availability, durable agent leases, fencing, or platform-wide Prometheus metrics.
+
+Selected links:
+
+* [Keystone website](https://getkeystone.ai/)
+* [Live demo](https://demo.getkeystone.ai/)
+* [Keystone GitHub organization](https://github.com/getkeystone)
+* [Keystone Engage](https://github.com/getkeystone/keystone-engage)
+* [Keystone Counsel](https://github.com/getkeystone/keystone-counsel)
+* [Keystone Verify](https://github.com/getkeystone/keystone-verify)
+* [Keystone evaluation ledger](https://github.com/getkeystone/keystone-ledger)
+
+## Enterprise engineering background
+
+I spent more than 12 years at Genesys across enterprise contact-center, hybrid, and cloud environments. Within the Business Applications organization, I specialized in Knowledge, AI and classification, Digital Services, Agent Workspace, and customer and interaction data.
+
+My work included:
 
 * Genesys Knowledge Center
-* Classification Server
-* Training Server
-* Universal Contact Server
+* Classification Server, Training Server, and Content Analyzer
+* Digital Services and Agent Workspace
+* Universal Contact Server and customer/interaction data
+* routing and conversational systems
+* implementations, migrations, and go-lives
+* distributed troubleshooting and enterprise integrations
+* customer-facing technical investigations
+* high-severity production incidents
 
-The work required direct collaboration with customers, product managers, developers, and engineering teams across on-premises, hybrid, and cloud contact-center environments. That experience with knowledge systems, routing, state, escalation, integration, and production diagnostics shapes how I build AI systems today.
+I troubleshot WFM-integrated agent and supervisor workflows and operational statistics in production, tracing missing or incorrect data across Workspace, Interaction Server, and adjacent application/data layers to isolate failure domains and drive resolution across product boundaries. I was not the dedicated WFM forecasting or planning SME.
 
-## Current AI engineering
+I worked directly with product managers, developers, and technical directors on product behavior, supportability, customer requirements, and deployment architecture, including clustered and high-volume customer/interaction-data deployments. I later led the Genesys Cloud CX UI Support Team.
 
-My current work includes:
+That experience taught me to treat routing, state, observability, failure recovery, escalation, and cross-component diagnosis as core engineering concerns. My classification and conversational-systems work at Genesys preceded modern LLM and generative-AI systems.
 
-* Python, FastAPI, Pydantic, and structured APIs
-* RAG, chunking, embeddings, and evidence-aware generation
-* PostgreSQL full-text search and pgvector hybrid retrieval
-* deterministic procedural reranking
-* agent workflows and explicit state machines
-* evaluation harnesses and regression testing
-* observability instrumentation, including OpenTelemetry where implemented
+## Evaluation
 
-I develop this work through **Keystone Applied Intelligence**, an independent engineering and R&D practice and reference implementation environment. Keystone is not presented as a universal governance platform. Its public repositories distinguish default served paths from experimental, feature-flagged, configured, and planned components.
+Evaluation is part of the engineering loop, not a final marketing checkpoint.
 
-## Selected public work
+Current retained internal evidence includes:
 
-### Keystone Gov
+* endpoint-agnostic evaluation tooling
+* 186 cases across 12 categories
+* 558 executions
+* adversarial authorization testing
+* preserved failing and passing runs
+* regression evidence after remediation
+* implementation defects surfaced through evaluation
 
-A FastAPI RAG reference implementation with PostgreSQL full-text search, pgvector hybrid retrieval, query-time ACL filtering, deterministic procedural reranking, HHEM as an additional factual-consistency signal, and retained internal evaluation evidence.
+These results are bound to the evaluated commits, configurations, datasets, and runs. A passing internal run is not independent validation or evidence of universal correctness.
 
-[Repository](https://github.com/getkeystone/keystone-gov) | [Documentation](https://docs.getkeystone.ai/)
+[Review the retained evaluation lineage and artifacts.](https://github.com/getkeystone/keystone-ledger)
 
-### Keystone Engage
+## Secondary research: Governed Execution
 
-A conversational-agent reference implementation whose default served path uses one `EngageOrchestrator`. An experimental five-phase coordinator is available through an alternate entry point behind a feature flag. OpenTelemetry instrumentation is wired in code; optional NATS JetStream integration belongs to the experimental path.
+**Governed Execution** is a secondary research program behind my applied engineering work. It studies runtime governance for consequential AI actions.
 
-[Repository](https://github.com/getkeystone/keystone-engage)
+> **Orchestration determines how work proceeds. Governance determines whether the intended consequence remains justified to proceed.**
 
-### Keystone Verify
+The working architecture separates:
 
-Deterministic, endpoint-agnostic tooling for testing HTTP responses against declarative assertions and retaining structured JSON results. The output is inspectable evaluation evidence, not cryptographically sealed proof.
+* a **control plane** for authority, policy, admissibility, placement, budget, and release
+* an **execution plane** for models, retrieval, tools, delegation, and workflows
+* an **evidence plane** for decisions, authorizations, actions, evaluations, failures, and outcomes
+* a separate **action boundary** for external consequence
 
-[Repository](https://github.com/getkeystone/keystone-verify)
+The program also examines six candidate runtime dimensions:
 
-### Runtime Validity
+* Identity
+* Task state
+* Tempo
+* Cost
+* Currency
+* Fidelity
 
-**Runtime Validity** is a bounded reference implementation within the broader **Governed Execution** research and engineering program. It is identified as Track A in the research program.
+These dimensions are research hypotheses, not a complete ontology or a claim of complete AI governance coverage.
 
-The current implementation shows only that a controlled process-local authority change can be retained as transition evidence and, under full revalidation, can change the implemented result from `PROCEED` / `MATCH` to `HOLD` / `MISMATCH`. With `revalidation_mode="none"`, authority is `NOT_EVALUATED`; proceeding in that mode is not evidence that the intended consequence remains justified.
+### Track A: Runtime Validity
 
-It does not establish authentic external revocation, production authorization, independent witness evidence, durable persistence, structural decision-to-transition binding, or external consequence enforcement.
+[Runtime Validity](https://github.com/getkeystone/runtime-validity) is a bounded Track A reference implementation.
 
-[Repository](https://github.com/getkeystone/runtime-validity)
+Current evidence supports only a controlled process-local authority change that can be retained as transition evidence and, under full revalidation, alter the implemented outcome from `PROCEED` / `MATCH` to `HOLD` / `MISMATCH`.
 
-## Governed Execution
-
-**Governed Execution** is the umbrella research and engineering program. Its controlling architecture is *Governed Execution as a Runtime Contract: A Substrate Architecture for Agentic AI*, v4.4.
-
-The architecture distinguishes three planes:
-
-* Control
-* Execution
-* Evidence
-
-It also defines a separate action boundary.
-
-The core distinction is:
-
-> Orchestration determines how work proceeds. Governance determines whether the intended consequence remains justified to proceed.
-
-The architecture and its candidate runtime dimensions are research hypotheses. They are not claims of complete AI governance coverage or a complete composed runtime.
-
-## Evaluation discipline
-
-Keystone's published evaluation results are internal evaluations bound to specific commits, configurations, datasets, and runs. They are not independent or third-party validation.
-
-The retained ledger includes passing and failing runs, known limitations, remediation history, and cases where re-verification remains outstanding.
-
-[Internal evaluation ledger](https://github.com/getkeystone/keystone-ledger)
+It does not establish authentic external revocation, production authentication or authorization, independent witness evidence, durable persistence guarantees, external consequence enforcement, distributed correctness, or universal validity of the broader Governed Execution architecture.
 
 ## Earlier research
 
-I completed an MScE in Electrical Engineering at the University of New Brunswick. My thesis, *Soft Computing Methods for Aggregated Load Control Using Smart Meters*, applied machine learning, optimization, and predictive control to aggregated electrical loads using smart-meter data.
+I completed an MScE in Electrical Engineering at the University of New Brunswick. My research applied machine learning, optimization, and predictive control to aggregated electrical loads using smart-meter data.
 
-Research is a differentiator behind my engineering work, especially in evaluation and runtime systems, rather than my primary professional positioning.
+Official thesis title: [*Soft computing methods for the implementation of aggregated load control of domestic electric water heaters*](https://unbscholar.lib.unb.ca/items/43166071-7869-4770-887d-4adb63fe8104).
 
-## Links
+## Current stack
 
-* [Personal site](https://arnaldosepulveda.com)
-* [Keystone Applied Intelligence](https://getkeystone.ai)
-* [Keystone documentation](https://docs.getkeystone.ai/)
-* [LinkedIn](https://www.linkedin.com/in/arnaldosepulveda)
-* [Email](mailto:arnaldo@getkeystone.ai)
+**AI / Retrieval**
+
+Python · FastAPI · PostgreSQL · pgvector · PostgreSQL full-text search · RAG · hybrid retrieval · embeddings · Ollama
+
+**Evaluation / Observability**
+
+evaluation harnesses · regression testing · OpenTelemetry · Grafana Tempo
+
+**Application / Infrastructure**
+
+Docker · Linux · React · TypeScript · NATS JetStream (experimental/optional)
+
+## Public work
+
+* [Personal site](https://arnaldosepulveda.com/)
+* [Writing](https://arnaldosepulveda.com/writing/)
+* [Keystone Applied Intelligence](https://getkeystone.ai/)
+* [Live demo](https://demo.getkeystone.ai/)
+* [Keystone GitHub](https://github.com/getkeystone)
+* [Keystone Verify](https://github.com/getkeystone/keystone-verify)
+* [Evaluation ledger](https://github.com/getkeystone/keystone-ledger)
+* [Runtime Validity](https://github.com/getkeystone/runtime-validity)
+* [LinkedIn](https://www.linkedin.com/in/arnaldosepulveda/)
+* [Contact](mailto:arnaldo@getkeystone.ai)
 
 ## Working principle
 
