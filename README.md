@@ -77,7 +77,7 @@ My work included:
 * customer-facing technical investigations
 * high-severity production incidents
 
-I troubleshot WFM-integrated agent and supervisor workflows and operational statistics in production, tracing missing or incorrect data across Workspace, Interaction Server, and adjacent application/data layers to isolate failure domains and drive resolution across product boundaries. I was not the dedicated WFM forecasting or planning SME.
+I troubleshot WFM-integrated agent and supervisor workflows and operational statistics in production, tracing missing or incorrect data across Workspace, Interaction Server, and adjacent application/data layers to isolate failure domains and drive resolution across product boundaries.
 
 I worked directly with product managers, developers, and technical directors on product behavior, supportability, customer requirements, and deployment architecture, including clustered and high-volume customer/interaction-data deployments. I later led the Genesys Cloud CX UI Support Team.
 
