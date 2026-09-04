@@ -1,84 +1,40 @@
 # Arnaldo Sepulveda
 
-Senior AI Engineer building governed AI systems for regulated enterprises.
+AI Engineer & Builder working at the intersection of enterprise Customer Support and applied AI.
 
-Nearly 13 years at Genesys working across the AI intelligence layer of enterprise contact centers: Knowledge Center retrieval, chat suite, e-services, contact intelligence. That was conversational AI in regulated and public-sector environments long before LLMs became fashionable.
+## Background
 
-Now building **Keystone Applied Intelligence**: a local, regulated AI platform for governed retrieval, multi-agent orchestration, and reproducible evaluation. The goal is simple: make AI systems behave like they are operating under real regulatory pressure, not demo conditions.
+12+ years at Genesys in enterprise Customer Support and Technical Escalations: contact-center systems, Digital Services, Agent Workspace, customer and interaction data, routing and integrations, WFM-integrated workflows, severe incident investigation, and migrations and go-lives. That included earlier enterprise conversational and classification systems (Knowledge Center retrieval, chat suite, e-services) — those predate the current generation of LLM-based systems and I don't describe them as such.
+
+## Why I moved into applied AI
+
+The organizations I supported already had the knowledge they needed. It was fragmented across tickets, documentation, conversations, and individual experts, and skilled people kept reconstructing context the organization had already encountered. The organization already possessed the knowledge, but had not operationalized it so the right person could reliably get the right answer in the right context.
+
+That's the problem I build for now: AI should reduce reconstruction work, not remove judgment where judgment matters.
 
 ## What I build
 
-Keystone is not a chatbot demo and not a thin wrapper around an API. It is a platform for AI systems that must be:
+Through [Keystone Applied Intelligence](https://getkeystone.ai), an independent applied-AI engineering and R&D practice, I build and evaluate reference implementations: authorization-aware retrieval, hybrid RAG with deterministic reranking, conversational and workflow agents, and the evaluation infrastructure to hold them accountable — on PostgreSQL/pgvector, local model serving, and OpenTelemetry-instrumented services.
 
-- evidence-backed,
-- fail-closed when evidence is insufficient,
-- access-controlled at query time,
-- auditable after the fact,
-- deployable on customer-controlled infrastructure.
+The more important habit behind the work is the cycle: understand the operational problem, find the constraint, establish a baseline, decide whether AI is actually the right intervention, build the smallest justified version, evaluate it both technically and with real users, measure the operational effect, and recommend scale, modify, or stop.
 
-The platform runs on-premises with local models and no external API dependency for core operation.
+## Evidence
 
-## Keystone platform
+Keystone's repositories are separately composed engineering instruments, not one demonstrated production platform. Evaluation evidence — including failing runs — is retained and public:
 
-Three extensions currently prove the platform in different ways:
+- [keystone-engage](https://github.com/getkeystone/keystone-engage) — conversational agent reference implementation
+- [keystone-counsel](https://github.com/getkeystone/keystone-counsel) — authorization-first retrieval
+- [keystone-verify](https://github.com/getkeystone/keystone-verify) — standalone evaluation harness
+- [keystone-ledger](https://github.com/getkeystone/keystone-ledger) — retained internal evaluation lineage, including failing runs
 
-- **Keystone Engage** — governed conversational agents for regulated customer interaction.
-- **Keystone Counsel** — authorization-first retrieval for legal, financial, and compliance content.
-- **Keystone Verify** — standalone evaluation harness for governed AI systems.
+## Research
 
-These sit on a shared substrate for:
-
-- agent identity and role registration,
-- task lifecycle state management,
-- hash-chained audit logging,
-- event-driven coordination,
-- local or remote dispatch abstraction,
-- sealed evaluation artifacts.
-
-That is the actual product: not one app, but the operating model underneath multiple regulated AI workloads.
-
-## What is already proven
-
-This work is not positioned as roadmap fiction. It has live demos, published baselines, failing runs, passing runs, and public artifacts.
-
-Published proof points include:
-
-- governed retrieval baseline with adversarial ACL blocking and fail-closed behavior,
-- governed agent baseline with 186 test cases across 12 categories and 0 failures,
-- evaluation methodology strong enough to uncover real bugs in the system it was testing,
-- public failing runs preserved alongside passing runs.
-
-The point is not just to ship AI behavior. The point is to make claims that can survive inspection.
-
-## Technical position
-
-Most LLM systems are still missing the operational discipline that enterprise contact centers had to learn years ago:
-
-- severity-tier escalation,
-- per-step validation,
-- compliance logging,
-- confidence-threshold refusal,
-- explicit routing under policy and cost constraints.
-
-Keystone rebuilds that discipline for the LLM substrate.
-
-## Current stack
-
-Python · FastAPI · PostgreSQL 16 + pgvector · Ollama · React / TypeScript · Docker Compose · NATS JetStream · Grafana Tempo · Caddy · Tailscale
-
-## Current focus
-
-- governed conversational agents,
-- authorization-first retrieval,
-- audit-grade agent orchestration,
-- portable evaluation infrastructure,
-- local-first deployment for regulated environments.
+A secondary, deeper thread: [Governed Execution](https://github.com/getkeystone/runtime-validity), a research program on runtime governance for agentic systems. Runtime Validity is its bounded Track A reference implementation.
 
 ## Links
 
-- Website: https://getkeystone.ai
-- Demo: https://demo.getkeystone.ai
-- Blog: https://getkeystone.ai/blog
+- Site: https://arnaldosepulveda.com
+- Writing: https://arnaldosepulveda.com/writing/
+- Keystone: https://getkeystone.ai
 - Keystone org: https://github.com/getkeystone
 - LinkedIn: https://www.linkedin.com/in/arnaldosepulveda
-- Contact: arnaldo@getkeystone.ai
