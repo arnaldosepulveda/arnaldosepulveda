@@ -27,6 +27,8 @@ Keystone's repositories are separately composed engineering instruments, not one
 - [keystone-verify](https://github.com/getkeystone/keystone-verify) — standalone evaluation harness
 - [keystone-ledger](https://github.com/getkeystone/keystone-ledger) — retained internal evaluation lineage, including failing runs
 
+A retained internal evaluation of keystone-core/agent-v1 exercised 186 cases across 12 categories and 558 executions, with 153 strict passes, 33 characterization cases, and 0 strict failures at the evaluated keystone-gov commit. This is a commit-scoped internal evaluation, not independent validation.
+
 ## Research
 
 A secondary, deeper thread: [Governed Execution](https://github.com/getkeystone/runtime-validity), a research program on runtime governance for agentic systems. Runtime Validity is its bounded Track A reference implementation.
