@@ -1,6 +1,6 @@
 # Arnaldo Sepulveda
 
-**AI Engineer & Builder working across production AI, conversational AI, RAG, evaluation, and enterprise contact-center systems.**
+**AI Engineer & Builder working at the intersection of enterprise Customer Support, applied AI, conversational AI, RAG, evaluation, and enterprise contact-center systems.**
 
 I spent more than 12 years at Genesys working on enterprise contact-center systems. Since late 2024, I have applied that operational foundation to hands-on AI engineering through Keystone Applied Intelligence.
 
@@ -90,12 +90,12 @@ Evaluation is part of the engineering loop, not a final marketing checkpoint.
 Current retained internal evidence includes:
 
 * endpoint-agnostic evaluation tooling
-* 186 cases across 12 categories
-* 558 executions
 * adversarial authorization testing
 * preserved failing and passing runs
 * regression evidence after remediation
 * implementation defects surfaced through evaluation
+
+A retained internal evaluation of keystone-core/agent-v1 exercised 186 cases across 12 categories and 558 executions, with 153 strict passes, 33 characterization cases, and 0 strict failures at the evaluated keystone-gov commit.
 
 These results are bound to the evaluated commits, configurations, datasets, and runs. A passing internal run is not independent validation or evidence of universal correctness.
 
