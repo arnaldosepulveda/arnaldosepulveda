@@ -133,6 +133,8 @@ Current evidence supports only a controlled process-local authority change that 
 
 It does not establish authentic external revocation, production authentication or authorization, independent witness evidence, durable persistence guarantees, external consequence enforcement, distributed correctness, or universal validity of the broader Governed Execution architecture.
 
+## Earlier research
+
 I completed an MScE in Electrical Engineering at the University of New Brunswick. My research applied machine learning, optimization, and predictive control to aggregated electrical loads using smart-meter data.
 
 Official thesis title: Soft computing methods for the implementation of aggregated load control of domestic electric water heaters.
