@@ -1,25 +1,32 @@
 # Arnaldo Sepulveda
 
-**AI Engineer & Builder working at the intersection of enterprise Customer Support, applied AI, conversational AI, RAG, evaluation, and enterprise contact-center systems.**
+**Applied AI Engineer | Support Operations & Enterprise Workflows**
 
-I spent more than 12 years at Genesys working on enterprise contact-center systems. Since late 2024, I have applied that operational foundation to hands-on AI engineering through Keystone Applied Intelligence.
+I work at the intersection of operational diagnosis, Support and Customer Operations, enterprise systems, analytics, and Applied AI.
 
-## What I build
+I spent more than 12 years at Genesys working across enterprise Customer Support, Technical Escalations, contact-center systems, integrations, production incidents, knowledge, routing, conversational systems, and customer and interaction data. Since late 2024, I have combined that operational foundation with hands-on Applied AI engineering through Keystone Applied Intelligence.
 
-I build production-oriented AI systems and engineering instruments, including:
+My current work asks a question upstream of implementation:
 
-* Python, FastAPI, Pydantic, and REST services
-* PostgreSQL and pgvector
-* PostgreSQL full-text search and hybrid retrieval
-* deterministic procedural reranking
-* RAG with citations and evidence thresholds
-* conversational workflows
-* authorization-aware retrieval
-* endpoint-agnostic evaluation harnesses and regression tests
-* OpenTelemetry GenAI and HTTP tracing
-* local model execution
+> **What is actually constraining the operation, what evidence supports that conclusion, and what intervention should be built?**
 
-The emphasis is practical: understand the operational problem, build something useful, evaluate it, find its failure modes, and improve it using evidence and real use.
+That intervention may be process change, deterministic software, retrieval, automation, Applied AI, or no intervention until stronger evidence exists.
+
+## Current applied work: Support Operations Intelligence
+
+[Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence) is an evidence-driven portfolio and research project connecting operational data to baseline measurement, competing explanations, workflow diagnosis, intervention selection, and evaluation.
+
+Current empirical work is validating a 7.47-million-row Calgary 311 artifact against a deliberately small canonical Case model before using the data for operational conclusions.
+
+The project deliberately separates:
+
+* what the source says;
+* what can be defensibly derived;
+* what remains unavailable;
+* what is simulated;
+* what would require additional evidence.
+
+The objective is not to add AI to support workflows by default. It is to determine where an intervention is warranted and then evaluate whether it actually improves the operation.
 
 ## Why this work
 
@@ -82,6 +89,23 @@ I troubleshot WFM-integrated agent and supervisor workflows and operational stat
 I worked directly with product managers, developers, and technical directors on product behavior, supportability, customer requirements, and deployment architecture, including clustered and high-volume customer/interaction-data deployments. I later led the Genesys Cloud CX UI Support Team.
 
 That experience taught me to treat routing, state, observability, failure recovery, escalation, and cross-component diagnosis as core engineering concerns. My classification and conversational-systems work at Genesys preceded modern LLM and generative-AI systems.
+
+## What I build
+
+I build production-oriented AI systems and engineering instruments, including:
+
+* Python, FastAPI, Pydantic, and REST services
+* PostgreSQL and pgvector
+* PostgreSQL full-text search and hybrid retrieval
+* deterministic procedural reranking
+* RAG with citations and evidence thresholds
+* conversational workflows
+* authorization-aware retrieval
+* endpoint-agnostic evaluation harnesses and regression tests
+* OpenTelemetry GenAI and HTTP tracing
+* local model execution
+
+The emphasis is practical: understand the operational problem, build something useful, evaluate it, find its failure modes, and improve it using evidence and real use.
 
 ## Evaluation
 
@@ -155,6 +179,7 @@ Docker · Linux · React · TypeScript · NATS JetStream (experimental/optional)
 
 ## Public work
 
+* [Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence)
 * [Personal site](https://arnaldosepulveda.com/)
 * [Writing](https://arnaldosepulveda.com/writing/)
 * [Keystone Applied Intelligence](https://getkeystone.ai/)
