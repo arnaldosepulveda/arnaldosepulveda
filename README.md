@@ -1,202 +1,464 @@
 # Arnaldo Sepulveda
 
-**Applied AI Engineer | Support Operations & Enterprise Workflows**
+**Digital Transformation | Enterprise Workflows | Applied AI**
 
-I work at the intersection of operational diagnosis, Support and Customer Operations, enterprise systems, analytics, and Applied AI.
+I work at the intersection of operational problem solving, enterprise workflows, customer-facing technology, analytics, automation, and Applied AI.
 
-I spent more than 12 years at Genesys working across enterprise Customer Support, Technical Escalations, contact-center systems, integrations, production incidents, knowledge, routing, conversational systems, and customer and interaction data. Since late 2024, I have combined that operational foundation with hands-on Applied AI engineering through Keystone Applied Intelligence.
+I spent more than 12 years at Genesys working directly with enterprise customers across Technical Support, Escalations, implementations, migrations, knowledge systems, routing, conversational systems, customer and interaction data, and cloud and hybrid environments.
 
-My current work asks a question upstream of implementation:
+That work repeatedly required the same pattern:
 
-> **What is actually constraining the operation, what evidence supports that conclusion, and what intervention should be built?**
+```text
+understand how work happens today
+        ->
+identify constraints, failure points, and repeated effort
+        ->
+gather requirements
+        ->
+separate symptoms from causes
+        ->
+evaluate possible interventions
+        ->
+implement and test changes
+        ->
+support rollout and adoption
+        ->
+observe what improved and what did not
+```
 
-That intervention may be process change, deterministic software, retrieval, automation, Applied AI, or no intervention until stronger evidence exists.
+Since late 2024, through Keystone Applied Intelligence and related applied work, I have extended that background into AI-enabled workflows, operational analysis, retrieval systems, evaluation, and runtime governance research.
+
+My current work starts with a question upstream of implementation:
+
+> **What is actually constraining the operation, what evidence supports that conclusion, and what intervention is justified?**
+
+The answer may be process redesign, better knowledge access, integration, workflow automation, deterministic software, analytics, Applied AI, or no intervention until stronger evidence exists.
+
+AI is a tool in that process, not the starting assumption.
+
+---
 
 ## Current applied work: Support Operations Intelligence
 
-[Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence) is an evidence-driven portfolio and research project connecting operational data to baseline measurement, competing explanations, workflow diagnosis, intervention selection, and evaluation.
+[Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence) is an evidence-driven portfolio and research project examining how operational evidence can support workflow diagnosis and intervention selection.
 
-Current empirical work is validating a 7.47-million-row Calgary 311 artifact against a deliberately small canonical Case model before using the data for operational conclusions.
+The intended sequence is:
+
+```text
+operational evidence
+        ->
+baseline
+        ->
+competing explanations
+        ->
+workflow understanding
+        ->
+diagnosis
+        ->
+intervention selection
+        ->
+implementation
+        ->
+evaluation
+        ->
+workflow outcome
+        ->
+business outcome
+```
 
 The project deliberately separates:
 
-* what the source says;
-* what can be defensibly derived;
-* what remains unavailable;
-* what is simulated;
-* what would require additional evidence.
+- what the source actually says
+- what can be defensibly derived
+- what remains unavailable
+- what is simulated
+- what would require additional evidence
+- what has been implemented
+- what has actually been evaluated
 
-The objective is not to add AI to support workflows by default. It is to determine where an intervention is warranted and then evaluate whether it actually improves the operation.
+The objective is not to add AI to an operation by default.
 
-## Why this work
+It is to determine whether a problem is real and material, understand what is causing it, establish what simpler alternatives can achieve, and then evaluate whether an intervention improves the intended workflow.
 
-In enterprise support, I repeatedly saw organizations reconstruct answers they already possessed. The knowledge was fragmented across tickets, documentation, internal discussions, and individual experts, making the right answer difficult to retrieve in the right context.
+### Calgary 311 evidence work
 
-The organization already possessed the knowledge, but had not operationalized it so the right person could reliably get the right answer in the right context.
+Current empirical work uses a 7.47-million-record Calgary 311 artifact.
 
-Applied AI can reduce that repeated reconstruction. The goal is not to replace experienced support engineers, but to make existing organizational knowledge more usable so they can focus on novel, ambiguous, and higher-value problems.
+The current stage is deliberately limited to source and evidence establishment.
 
-**[The knowledge was already there. The system to use it was not.](https://arnaldosepulveda.com/writing/the-knowledge-was-already-there/)**
+Completed work includes:
 
-## Current work: Keystone Applied Intelligence
+- reproducible ingestion and full-artifact execution
+- structural and identifier validation
+- descriptive source-native baselines
+- deterministic missingness and sentinel checks
+- controlled source-quality review procedures
+- retained engineering and evaluation artifacts
 
-[Keystone Applied Intelligence](https://getkeystone.ai/) is my independent AI engineering and R&D practice. I use it to build and evaluate retrieval systems, conversational workflows, APIs, observability, and bounded runtime controls.
+This work has not established:
 
-Current implementation work includes:
+- an end-to-end Calgary 311 operational workflow model
+- a diagnosed service-performance problem
+- an intervention priority
+- an AI intervention
+- a before-and-after improvement
+- a business outcome
+- a production deployment
 
-* Python, FastAPI, Pydantic, and REST APIs
-* PostgreSQL FTS + pgvector hybrid retrieval
-* deterministic reranking
-* citations and evidence thresholds
-* authorization-first retrieval
-* conversational AI workflows
-* evaluation and regression infrastructure
-* OpenTelemetry tracing with GenAI model, token, latency, and HTTP spans delivered to Grafana Tempo
-* local inference through Ollama
+The purpose of this stage is to establish what the evidence can support before making operational claims.
 
-The public projects are separately composed engineering instruments. They are not evidence of one complete demonstrated production runtime.
+---
 
-In [Keystone Engage](https://github.com/getkeystone/keystone-engage), the default served application uses one orchestrator. A separate experimental path implements five specialist agent identities across four coordination phases. NATS JetStream integration is optional and experimental, not evidence of distributed production deployment. The repositories do not establish production high availability, durable agent leases, fencing, or platform-wide Prometheus metrics.
+## Applied transformation example: fire-department knowledge workflow
 
-Selected links:
+A volunteer fire department had a practical knowledge-access problem: procedures and operational documentation existed, but firefighters could spend unnecessary time locating the right information during training, truck work, maintenance, and other internal activities.
 
-* [Keystone website](https://getkeystone.ai/)
-* [Live demo](https://demo.getkeystone.ai/)
-* [Keystone GitHub organization](https://github.com/getkeystone)
-* [Keystone Engage](https://github.com/getkeystone/keystone-engage)
-* [Keystone Counsel](https://github.com/getkeystone/keystone-counsel)
-* [Keystone Verify](https://github.com/getkeystone/keystone-verify)
-* [Keystone evaluation ledger](https://github.com/getkeystone/keystone-ledger)
+I worked from the operational problem through implementation:
 
-## Enterprise engineering background
+```text
+knowledge-access problem
+        ->
+understand user need and document environment
+        ->
+define retrieval and access requirements
+        ->
+design the workflow
+        ->
+build and test
+        ->
+deploy on-premises
+        ->
+support firefighter use
+        ->
+observe operational feedback
+```
 
-I spent more than 12 years at Genesys across enterprise contact-center, hybrid, and cloud environments. Within the Business Applications organization, I specialized in Knowledge, AI and classification, Digital Services, Agent Workspace, and customer and interaction data.
+The resulting workflow uses role-aware retrieval to help firefighters find relevant procedures and documentation more quickly.
 
-My work included:
+Because some source material relates to operational and medical procedures, the workflow uses evidence thresholds and can withhold an answer when retrieved evidence is insufficient rather than presenting low-confidence output as authoritative.
 
-* Genesys Knowledge Center
-* Classification Server, Training Server, and Content Analyzer
-* Digital Services and Agent Workspace
-* Universal Contact Server and customer/interaction data
-* routing and conversational systems
-* implementations, migrations, and go-lives
-* distributed troubleshooting and enterprise integrations
-* customer-facing technical investigations
-* high-severity production incidents
+Firefighters have used the system during internal departmental activities including training, truck work, and maintenance.
 
-I troubleshot WFM-integrated agent and supervisor workflows and operational statistics in production, tracing missing or incorrect data across Workspace, Interaction Server, and adjacent application/data layers to isolate failure domains and drive resolution across product boundaries.
+This is a bounded internal operational deployment. It does not establish clinical validation, independent safety validation, enterprise high availability, or suitability outside the department and use case in which it is being used.
 
-I worked directly with product managers, developers, and technical directors on product behavior, supportability, customer requirements, and deployment architecture, including clustered and high-volume customer/interaction-data deployments. I later led the Genesys Cloud CX UI Support Team.
+---
 
-That experience taught me to treat routing, state, observability, failure recovery, escalation, and cross-component diagnosis as core engineering concerns. My classification and conversational-systems work at Genesys preceded modern LLM and generative-AI systems.
+## Enterprise systems and transformation background
 
-## What I build
+I spent more than 12 years at Genesys across enterprise contact-center, on-premises, hybrid, and cloud environments.
 
-I build production-oriented AI systems and engineering instruments, including:
+Within the Business Applications organization, I specialized in areas including:
 
-* Python, FastAPI, Pydantic, and REST services
-* PostgreSQL and pgvector
-* PostgreSQL full-text search and hybrid retrieval
-* deterministic procedural reranking
-* RAG with citations and evidence thresholds
-* conversational workflows
-* authorization-aware retrieval
-* endpoint-agnostic evaluation harnesses and regression tests
-* OpenTelemetry GenAI and HTTP tracing
-* local model execution
+- Knowledge systems
+- Classification Server and Training Server
+- Digital Services
+- Agent Workspace
+- customer and interaction data
+- routing
+- conversational systems
+- operational statistics
+- enterprise integrations
 
-The emphasis is practical: understand the operational problem, build something useful, evaluate it, find its failure modes, and improve it using evidence and real use.
+### Customer discovery and requirements
 
-## Evaluation
+As a product SME, I worked directly with enterprise customers, including onsite engagements, to understand:
 
-Evaluation is part of the engineering loop, not a final marketing checkpoint.
+- existing workflows
+- operational constraints
+- deployment requirements
+- integration dependencies
+- scale and availability requirements
+- desired application behavior
 
-Current retained internal evidence includes:
+I translated those findings into technical requirements, customization decisions, deployment architectures, and implementation guidance.
 
-* endpoint-agnostic evaluation tooling
-* adversarial authorization testing
-* preserved failing and passing runs
-* regression evidence after remediation
-* implementation defects surfaced through evaluation
+This included work around multi-node customer and interaction data environments, Knowledge deployments, integrations, and hybrid transitions.
 
-A retained internal evaluation of keystone-core/agent-v1 exercised 186 cases across 12 categories and 558 executions, with 153 strict passes, 33 characterization cases, and 0 strict failures at the evaluated keystone-gov commit.
+### Cloud and hybrid transitions
 
-These results are bound to the evaluated commits, configurations, datasets, and runs. A passing internal run is not independent validation or evidence of universal correctness.
+I supported customers moving from on-premises environments toward hybrid and cloud architectures.
+
+That work required understanding the existing environment, gathering constraints, defining target requirements, validating integrations, supporting migrations, and helping stabilize systems after transition.
+
+### Workflow automation and routing
+
+Genesys platforms included routing and workflow capabilities that could respond to events, schedules, business rules, integrations, and API-driven conditions.
+
+I designed and configured workflows and automations within those platform capabilities, including operational routing behavior and integrations between systems.
+
+Within Support, I also participated in redesigning case-routing behavior during a ticketing-system transition.
+
+The previous process depended more heavily on analysts manually selecting work from queues.
+
+The revised workflow moved toward automated assignment based on factors such as severity and impact, while allowing lower-risk work to support developing analysts and moving higher-impact escalations more rapidly toward experienced specialists.
+
+### Knowledge and self-service
+
+A recurring operational problem was repeated dependence on subject-matter experts for questions whose answers already existed.
+
+I created and maintained technical knowledge, troubleshooting documentation, tutorials, and internal training material so support engineers could find known answers without repeatedly waiting for an expert to respond.
+
+This experience is one of the reasons my current work focuses heavily on operationalizing organizational knowledge rather than merely generating new text.
+
+### Training and enablement
+
+I developed and delivered internal training, presentations, tutorials, and technical documentation for support engineers and junior staff.
+
+Topics included product behavior, architecture, troubleshooting methods, multi-node deployments, application interactions, and the products for which I served as SME.
+
+I later led the Genesys Cloud CX UI Support Team and mentored engineers on structured troubleshooting, documentation, technical communication, and escalation practices.
+
+### Production operations
+
+I owned and supported high-severity enterprise production problems across North America, Latin America, and EMEA.
+
+The work frequently crossed:
+
+- cloud services
+- routing
+- digital channels
+- agent applications
+- APIs
+- customer and interaction data
+- integrations
+- middleware
+- databases
+- customer infrastructure
+- product boundaries
+- organizational boundaries
+
+The core task was often not simply fixing a component.
+
+It was establishing what was actually happening, identifying the failure domain, coordinating the appropriate people, validating the change, and restoring the customer workflow.
+
+---
+
+## Conversational AI before generative AI
+
+My experience with conversational and classification systems predates modern LLM systems.
+
+At Genesys I worked with production systems involving:
+
+- intent classification
+- text classification
+- model-training workflows
+- category tuning
+- dialog behavior
+- confidence thresholds
+- slot validation
+- escalation
+- human handoff
+- routing
+- compliance logging
+
+I do not present those systems as equivalent to modern LLM applications.
+
+They are relevant because they provided earlier experience with production AI behavior, confidence, routing, human escalation, and the operational consequences of imperfect automated decisions.
+
+---
+
+## Keystone Applied Intelligence
+
+[Keystone Applied Intelligence](https://getkeystone.ai/) is my independent engineering and R&D practice.
+
+It provides the technical implementation side of my current work.
+
+I use Keystone to build and evaluate mechanisms involving:
+
+- retrieval and RAG
+- conversational workflows
+- authorization-aware retrieval
+- evaluation and regression testing
+- task state
+- observability
+- local model execution
+- bounded runtime controls
+
+The public Keystone projects are separate engineering instruments.
+
+They are not evidence of one complete demonstrated production runtime, and mechanisms demonstrated in one workload are not automatically attributed to another.
+
+Selected work includes:
+
+- [Keystone Gov](https://github.com/getkeystone/keystone-gov)
+- [Keystone Engage](https://github.com/getkeystone/keystone-engage)
+- [Keystone Counsel](https://github.com/getkeystone/keystone-counsel)
+- [Keystone Verify](https://github.com/getkeystone/keystone-verify)
+- [Keystone Ledger](https://github.com/getkeystone/keystone-ledger)
+
+---
+
+## Applied AI engineering
+
+My current implementation work includes:
+
+### AI and retrieval
+
+Python · FastAPI · Pydantic · PostgreSQL · pgvector · PostgreSQL full-text search · RAG · hybrid retrieval · embeddings · Ollama
+
+### Evaluation and observability
+
+Evaluation harnesses · regression testing · structured run artifacts · OpenTelemetry · Grafana Tempo
+
+### Application and infrastructure
+
+REST/HTTP APIs · Docker · Linux · Git · React · TypeScript
+
+I also have limited hands-on exposure to Power Automate, Power Apps, Copilot, and Azure AI Foundry and am developing broader competency in enterprise automation and AI tooling.
+
+The engineering objective is not to maximize architectural complexity.
+
+It is to build the smallest intervention that can be tested against the operational problem.
+
+---
+
+## Evaluation discipline
+
+Evaluation is part of the engineering loop, not a final demonstration step.
+
+Current Keystone evaluation work includes:
+
+- declarative evaluation cases
+- deterministic assertions
+- endpoint-agnostic testing
+- adversarial authorization cases
+- preserved failing runs
+- remediation lineage
+- regression evidence
+- latency measurement
+- structured run artifacts
+
+A retained internal evaluation of `keystone-core/agent-v1` exercised:
+
+- 186 cases
+- 12 categories
+- 558 executions
+- 153 strict-pass cases
+- 33 characterization cases
+- 0 strict failures at the evaluated commit
+
+The failing predecessor is retained.
+
+Those results apply only to the evaluated commits, configurations, cases, and runs.
+
+They are internal evaluation results, not independent validation or evidence of universal correctness.
 
 [Review the retained evaluation lineage and artifacts.](https://github.com/getkeystone/keystone-ledger)
 
+---
+
 ## Secondary research: Governed Execution
 
-**Governed Execution** is a secondary research program behind my applied engineering work. It studies runtime governance for consequential AI actions.
+**Governed Execution** is a separate research program examining runtime governance for consequential AI actions.
 
 > **Orchestration determines how work proceeds. Governance determines whether the intended consequence remains justified to proceed.**
 
 The working architecture separates:
 
-* a **control plane** for authority, policy, admissibility, placement, budget, and release
-* an **execution plane** for models, retrieval, tools, delegation, and workflows
-* an **evidence plane** for decisions, authorizations, actions, evaluations, failures, and outcomes
-* a separate **action boundary** for external consequence
+- a **Control plane** for authority, policy, admissibility, placement, budget, and release
+- an **Execution plane** for models, retrieval, tools, delegation, and workflows
+- an **Evidence plane** for decisions, authorizations, actions, evaluations, failures, and outcomes
+- a separate **action boundary** determining whether output may create external consequence
 
-The program also examines six candidate runtime dimensions:
+The research examines candidate runtime dimensions including:
 
-* Identity
-* Task state
-* Tempo
-* Cost
-* Currency
-* Fidelity
+- Identity
+- Task state
+- Tempo
+- Cost
+- Currency
+- Fidelity
 
-These dimensions are research hypotheses, not a complete ontology or a claim of complete AI governance coverage.
+These are research hypotheses rather than a complete ontology or claim of complete AI governance coverage.
 
-### Track A: Runtime Validity
+### Runtime Validity: Track A
 
-[Runtime Validity](https://github.com/getkeystone/runtime-validity) is a bounded Track A reference implementation.
+[Runtime Validity](https://github.com/getkeystone/runtime-validity) is a bounded reference implementation and research instrument for Track A.
 
-Current evidence supports only a controlled process-local authority change that can be retained as transition evidence and, under full revalidation, alter the implemented outcome from `PROCEED` / `MATCH` to `HOLD` / `MISMATCH`.
+Current evidence supports only a controlled process-local authority change that can be retained as transition evidence and, under full revalidation, alter the implemented result from `PROCEED / MATCH` to `HOLD / MISMATCH`.
 
-It does not establish authentic external revocation, production authentication or authorization, independent witness evidence, durable persistence guarantees, external consequence enforcement, distributed correctness, or universal validity of the broader Governed Execution architecture.
+It does not establish authentic external revocation, production authentication or authorization, independent witness evidence, durable persistence, external consequence enforcement, distributed correctness, or universal validity of the broader architecture.
+
+The detailed research framing and current claim boundaries are maintained in the Runtime Validity and Keystone repositories.
+
+---
 
 ## Earlier research
 
-I completed an MScE in Electrical Engineering at the University of New Brunswick. My research applied machine learning, optimization, and predictive control to aggregated electrical loads using smart-meter data.
+I completed an MScE in Electrical Engineering at the University of New Brunswick.
 
-Official thesis title: Soft computing methods for the implementation of aggregated load control of domestic electric water heaters.
+My graduate research applied machine learning, optimization, predictive control, simulation, and smart-meter data to aggregated electrical load control.
 
-## Current stack
+Official thesis title:
 
-**AI / Retrieval**
+**Soft computing methods for the implementation of aggregated load control of domestic electric water heaters**
 
-Python · FastAPI · PostgreSQL · pgvector · PostgreSQL full-text search · RAG · hybrid retrieval · embeddings · Ollama
+---
 
-**Evaluation / Observability**
+## What I am interested in
 
-evaluation harnesses · regression testing · OpenTelemetry · Grafana Tempo
+I am particularly interested in work involving the full path from operational problem to measurable improvement:
 
-**Application / Infrastructure**
+```text
+discovery
+        ->
+process and workflow understanding
+        ->
+requirements
+        ->
+root-cause analysis
+        ->
+intervention selection
+        ->
+implementation
+        ->
+testing
+        ->
+deployment
+        ->
+adoption
+        ->
+evaluation
+```
 
-Docker · Linux · React · TypeScript · NATS JetStream (experimental/optional)
+That may involve AI.
+
+It may also involve process change, enterprise systems, integration, automation, analytics, or a simpler deterministic solution.
+
+The important question is whether the intervention improves the work.
+
+---
 
 ## Public work
 
-* [Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence)
-* [Personal site](https://arnaldosepulveda.com/)
-* [Writing](https://arnaldosepulveda.com/writing/)
-* [Keystone Applied Intelligence](https://getkeystone.ai/)
-* [Live demo](https://demo.getkeystone.ai/)
-* [Keystone GitHub](https://github.com/getkeystone)
-* [Keystone Verify](https://github.com/getkeystone/keystone-verify)
-* [Evaluation ledger](https://github.com/getkeystone/keystone-ledger)
-* [Runtime Validity](https://github.com/getkeystone/runtime-validity)
-* [LinkedIn](https://www.linkedin.com/in/arnaldosepulveda/)
-* [Contact](mailto:arnaldo@getkeystone.ai)
+- [Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence)
+- [Personal site](https://arnaldosepulveda.com/)
+- [Writing](https://arnaldosepulveda.com/writing/)
+- [Keystone Applied Intelligence](https://getkeystone.ai/)
+- [Keystone GitHub](https://github.com/getkeystone)
+- [Keystone Engage](https://github.com/getkeystone/keystone-engage)
+- [Keystone Verify](https://github.com/getkeystone/keystone-verify)
+- [Keystone Ledger](https://github.com/getkeystone/keystone-ledger)
+- [Runtime Validity](https://github.com/getkeystone/runtime-validity)
+- [LinkedIn](https://www.linkedin.com/in/arnaldosepulveda/)
+- [Contact](mailto:arnaldo@getkeystone.ai)
+
+---
 
 ## Working principle
 
-Build the control.
+Understand the operation.
 
-Test the control.
+Establish the evidence.
 
-Preserve the failure.
+Choose the intervention.
+
+Build only what is justified.
+
+Test what was built.
+
+Preserve failures.
+
+Measure the outcome.
 
 Limit the claim to what the evidence supports.
