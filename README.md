@@ -1,36 +1,78 @@
 # Arnaldo Sepulveda
 
-I spent 12+ years at Genesys in enterprise Technical Support and Escalations, diagnosing production problems across contact-center routing, digital channels, agent desktop, customer and interaction data, knowledge and search systems, and integrations. I hold a BScE and MScE in Electrical Engineering.
+**Enterprise Technical Solutions | 12+ Years at Genesys | CX Platforms, APIs & Integrations | Production Diagnosis | Applied AI**
 
-My Genesys work was Support and Escalations, not product development. This GitHub shows separate, independent technical work since late 2024, mostly under Keystone Applied Intelligence.
+## Professional background
 
-## What these repositories demonstrate
+I spent more than 12 years at Genesys in Technical Support and Escalations, working with enterprise and public-sector customers across North America, Latin America, and EMEA.
 
-- Python services and APIs (FastAPI, Pydantic) over PostgreSQL, including full-text plus pgvector hybrid retrieval
-- Access control enforced at retrieval time, including a cross-client isolation defect found, fixed, and covered by regression tests
-- Evaluation as part of engineering: declarative test cases, retained failing runs, regression evidence
-- Conversational workflows with explicit task state, escalation, and human handoff
-- Observability with OpenTelemetry tracing
-- Reproducible data work: a tested pipeline over 7.47 million public Calgary 311 records
+My work involved difficult production diagnosis across enterprise CX/contact-center platforms, integrations, routing, digital channels, knowledge systems, conversational AI, customer and interaction data, agent applications, and distributed systems.
 
-## Start here
+I worked directly with customers, Product, and Engineering to isolate problems, reproduce failures, investigate configuration and integration issues, distinguish product defects, recommend technical changes, and support migrations, go-lives, and post-launch stabilization.
 
-| Repository | What it shows |
+Earlier responsibilities included product-specialist customer discovery, including onsite engagements, and translating workflow and deployment constraints into technical requirements. During my final months I served as technical lead for a six-person Genesys Cloud CX UI Support team, providing diagnostic guidance and coaching.
+
+I was not employed at Genesys as a software developer, formal people manager, or dedicated implementation consultant.
+
+### What I'm good at
+
+- Production diagnosis across distributed enterprise systems
+- Customer-facing technical investigation and escalation
+- CX platform internals: routing, knowledge, digital channels, conversational AI, agent applications
+- API and integration troubleshooting
+- Translating operational and deployment constraints into technical requirements
+- Cross-team coordination with Product, Engineering, and customer operations
+
+## Independent engineering work (since late 2024)
+
+Since leaving Genesys I have been extending that enterprise background through independent applied-AI engineering under [Keystone Applied Intelligence](https://github.com/getkeystone), a Canadian sole proprietorship.
+
+This work builds practical systems and evaluates them against their own evidence. It is a differentiator extending my professional experience, not a replacement for it.
+
+### What I've built
+
+- **Python, FastAPI, Pydantic, and REST APIs** — governed retrieval and conversational services
+- **PostgreSQL FTS + pgvector hybrid retrieval** — lexical and vector search with deterministic reranking
+- **Authorization-aware retrieval** — role-based access control, client isolation, and document classification filters enforced at the database layer, including a cross-client isolation defect found, fixed, and covered by regression tests
+- **Evidence thresholds, citations, and refusal** — fail-closed behavior when retrieved evidence is insufficient
+- **Conversational workflows** — structured task state, escalation, human handoff, and intent classification
+- **Evaluation infrastructure** — endpoint-agnostic harness with declarative assertions, retained evaluation runs, and regression lineage ([keystone-verify](https://github.com/getkeystone/keystone-verify), [keystone-ledger](https://github.com/getkeystone/keystone-ledger))
+- **OpenTelemetry instrumentation** — GenAI model, token, latency, and HTTP spans delivered to Grafana Tempo
+- **Docker, Linux, local inference through Ollama** — customer-infrastructure-first deployment
+
+### Key repositories
+
+| Repository | What it demonstrates |
 |---|---|
-| [keystone-gov](https://github.com/getkeystone/keystone-gov) | Hybrid retrieval and RAG API with citations, evidence thresholds, and query-time access control |
-| [keystone-counsel](https://github.com/getkeystone/keystone-counsel) | Authorization-first retrieval with role, document-classification, and client-isolation filters |
-| [keystone-verify](https://github.com/getkeystone/keystone-verify) | Endpoint-agnostic evaluation harness with declarative assertions and structured JSON results |
-| [keystone-engage](https://github.com/getkeystone/keystone-engage) | Conversational workflow reference implementation with task state, escalation, and human handoff |
-| [support-operations-intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence) | Contract-based ingestion, validation, and baselines over 7.47M public records, with a 218-test suite |
+| [keystone-gov](https://github.com/getkeystone/keystone-gov) | Governed RAG: hybrid retrieval, role-based ACL, evidence thresholds, factual consistency scoring, HMAC audit trail |
+| [keystone-engage](https://github.com/getkeystone/keystone-engage) | Governed conversational agent: authorization, escalation routing, intent classification, fail-closed refusal |
+| [keystone-counsel](https://github.com/getkeystone/keystone-counsel) | Authorization-first retrieval: role × classification × client isolation for regulated content |
+| [keystone-verify](https://github.com/getkeystone/keystone-verify) | Standalone evaluation harness: declarative assertions over HTTP endpoints |
+| [keystone-ledger](https://github.com/getkeystone/keystone-ledger) | Retained evaluation artifacts: passing and failing runs, remediation lineage |
+| [Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence) | Evidence-driven operational analysis: 7.47M Calgary 311 records, reproducible baselines, 218-test suite |
 
-One retained internal evaluation of keystone-gov used 186 cases across 12 categories (558 executions) and surfaced four implementation defects before release. Runs, including the failing predecessor, are in [keystone-ledger](https://github.com/getkeystone/keystone-ledger).
+These are separate reference implementations and research projects. They are not one integrated production platform and do not represent client engagements.
 
-## What these repositories do not claim
+### Evaluation evidence
 
-- They are independent projects, not paid client work.
-- They are separate reference implementations, not one integrated production platform.
-- Internal evaluation results apply to specific commits and runs. They are not independent validation.
-- A retrieval prototype from this work was piloted by a small group at a volunteer fire department. That is a small real-user pilot, not an organization-wide deployment or a measured outcome.
-- [runtime-validity](https://github.com/getkeystone/runtime-validity) is exploratory research, not a deployed capability.
+A retained internal evaluation of keystone-core/agent-v1 exercised 186 cases across 12 categories and 558 executions, with 153 strict passes, 33 characterization cases, and 0 strict failures at the evaluated keystone-gov commit. The retained artifacts are in [`keystone-ledger/artifacts/kdat-002d/`](https://github.com/getkeystone/keystone-ledger/tree/main/artifacts/kdat-002d).
 
-[LinkedIn](https://www.linkedin.com/in/arnaldosepulveda/) · [arnaldosepulveda.com](https://arnaldosepulveda.com/) · [getkeystone.ai](https://getkeystone.ai/) · [Keystone on GitHub](https://github.com/getkeystone)
+A preceding run (agent-v0) found 9 failures traced to 4 implementation defects, which were fixed before agent-v1. Both runs are retained.
+
+These results are bound to the evaluated commits, configurations, datasets, and runs. A passing internal run is not independent validation or evidence of universal correctness.
+
+### Community pilot
+
+A role-aware knowledge-access prototype was used by a small group at a volunteer fire department. This was a limited real-user pilot, not an organization-wide deployment or a measured operational improvement.
+
+## Education
+
+BScE and MScE in Electrical Engineering, University of New Brunswick. Graduate research applied machine learning, optimization, and predictive control to aggregated electrical loads using smart-meter data.
+
+## Links
+
+- [LinkedIn](https://www.linkedin.com/in/arnaldosepulveda/)
+- [Personal site](https://arnaldosepulveda.com/)
+- [Keystone Applied Intelligence](https://getkeystone.ai/) · [GitHub](https://github.com/getkeystone)
+- [Support Operations Intelligence](https://github.com/arnaldosepulveda/support-operations-intelligence)
+- [Contact](mailto:arnaldo@getkeystone.ai)
