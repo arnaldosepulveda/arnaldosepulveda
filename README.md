@@ -1,6 +1,6 @@
 # Arnaldo Sepulveda
 
-**Enterprise Technical Solutions | 12+ Years at Genesys | CX Platforms, APIs & Integrations | Production Diagnosis | Applied AI**
+**Applied AI and operational workflows · Keystone Applied Intelligence (independent, non-commercial) · 12+ years of enterprise escalations at Genesys**
 
 ## Professional background
 
@@ -10,9 +10,11 @@ My work involved difficult production diagnosis across enterprise CX/contact-cen
 
 I worked directly with customers, Product, and Engineering to isolate problems, reproduce failures, investigate configuration and integration issues, distinguish product defects, recommend technical changes, and support migrations, go-lives, and post-launch stabilization.
 
-Earlier responsibilities included product-specialist customer discovery, including onsite engagements, and translating workflow and deployment constraints into technical requirements. During my final months I served as technical lead for a six-person Genesys Cloud CX UI Support team, providing diagnostic guidance and coaching.
+Earlier responsibilities included product-specialist customer discovery, including onsite visits, and translating workflow and deployment constraints into technical requirements. During my final months I served as technical lead for the Genesys Cloud CX UI Support team, providing diagnostic guidance and coaching for the six-person team.
 
 I was not employed at Genesys as a software developer, formal people manager, or dedicated implementation consultant.
+
+I also have more than 20 years of part-time maintenance experience on my family's rental properties, doing the work myself and scoping and hiring trades when needed. I volunteer as a firefighter.
 
 ### What I'm good at
 
@@ -23,9 +25,13 @@ I was not employed at Genesys as a software developer, formal people manager, or
 - Translating operational and deployment constraints into technical requirements
 - Cross-team coordination with Product, Engineering, and customer operations
 
-## Independent engineering work (since late 2024)
+## Keystone: independent applied AI work (since late 2024)
 
-Since leaving Genesys I have been extending that enterprise background through independent applied-AI engineering under [Keystone Applied Intelligence](https://github.com/getkeystone), a Canadian sole proprietorship.
+Since leaving Genesys I have been extending that enterprise background through independent, non-commercial applied AI work under [Keystone Applied Intelligence](https://github.com/getkeystone), a Canadian sole proprietorship, done part time on my own time.
+
+Current focus: operational workflows in buildings. The first lab project is a heating-plant simulation, in progress, to produce realistic operating data for testing maintenance workflows. The earlier reference systems (retrieval, conversational workflows, evaluation and runtime controls) remain public with their evidence and limits.
+
+Keystone does not offer services or products and has no clients. The repositories, documentation and evidence are published for review and learning.
 
 This work builds practical systems and evaluates them against their own evidence. It is a differentiator extending my professional experience, not a replacement for it.
 
